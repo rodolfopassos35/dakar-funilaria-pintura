@@ -140,7 +140,7 @@ body {
     position: relative;
 }
 .caixa-logo {
-    width: 700px;
+    max-width: 700px;
     min-width: 300px;
     height: 500px;
     background-image: url("assets/foto-banner-funilaria.jpg");
@@ -479,6 +479,9 @@ a .whats {
         transform: scaleY(1); /* Expanda o menu verticalmente */
     }
     /* seção banner */
+    .caixa-titulo {
+        width: 350px;
+    }
     .titulo {
         font-size: 5rem;
     }
