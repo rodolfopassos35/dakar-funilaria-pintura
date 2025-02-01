@@ -1,584 +1,594 @@
 * {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color:#fff;
-} 
+  background-color: #fff;
+}
 .topo {
-    width:100%;
-    height:80px;
-    background-color:#010101;
+  width: 100%;
+  height: 80px;
+  background-color: #010101;
 }
 .conteudo-topo {
-    width: 100%;
-    height:100%;
-    margin:0 auto;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #010101;
-    position:relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #010101;
+  position: relative;
 }
 .conteudo-topo h1 {
-    font-size: 1.6rem;
-    color:#fff;
-    word-spacing: 20px;
-    width: 20%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 1.6rem;
+  color: #fff;
+  word-spacing: 20px;
+  width: 20%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .conteudo-topo img {
-    width: 150px;
-    height:140px;
+  width: 150px;
+  height: 140px;
 }
 .conteudo-topo::before {
-    content: "";
-    position: absolute; 
-    top: 65px;
-    width: 100%; 
-    height: 1px; 
-    background: linear-gradient(to left, #564d4d, #dfd5d5,#3f3434);
+  content: "";
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left, #564d4d, #dfd5d5, #3f3434);
 }
 /* Oculta o checkbox */
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 /* Estilo do ícone do menu hambúrguer  */
 .menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    margin: 20px;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin: 20px;
+  z-index: 2;
 }
 
 .menu-icon span {
-    display: block;
-    height: 4px;
-    background: #7c7979;
-    border-radius: 2px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  display: block;
+  height: 4px;
+  background: #7c7979;
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Transformações quando o menu está ativado */
 .menu-toggle:checked + .menu-icon span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle:checked + .menu-icon span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .menu-toggle:checked + .menu-icon span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Estilo do menu */
 .menu {
-    position: absolute;
-    top: 0;
-    right: 50px;
-    width: 10%;
-    height: 80px; 
-    background: #333;
-    transform: translateY(-100%); /* Faz o menu sair pela parte de cima */
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Certifique-se de que os itens do menu estão em coluna */
-    padding: 20px 0; /* Adicione um pouco de padding */
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 10%;
+  height: 80px;
+  background: #333;
+  transform: translateY(-100%); /* Faz o menu sair pela parte de cima */
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Certifique-se de que os itens do menu estão em coluna */
+  padding: 20px 0; /* Adicione um pouco de padding */
+  z-index: 1;
 }
 
 .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    width: 100%; /* Garante que os itens ocupam a largura total */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%; /* Garante que os itens ocupam a largura total */
 }
 
 .menu ul li {
-    margin: 0; /* Ajuste a margem para diminuir o espaçamento */
+  margin: 0; /* Ajuste a margem para diminuir o espaçamento */
 }
 
 .menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px; /* Reduza o tamanho da fonte se necessário */
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px; /* Reduza o tamanho da fonte se necessário */
+  transition: color 0.3s ease;
 }
 
 .menu ul li a:hover {
-    color: #ff7e5f;
+  color: #ff7e5f;
 }
 
 /* Mostrar o menu quando o checkbox estiver marcado */
 .menu-toggle:checked ~ .menu {
-    transform: translateY(0); /* Muda a posição do menu para visível */
+  transform: translateY(0); /* Muda a posição do menu para visível */
 }
 
 /* seção principal */
 .secao-banner {
-    width: 100%;
-    height:90vh;
-    background-color:#010101;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  height: 90vh;
+  background-color: #010101;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .caixa-logo {
-    max-width: 700px;
-    min-width: 300px;
-    height: 500px;
-    background-image: url("assets/foto-banner-funilaria.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
+  max-width: 700px;
+  min-width: 300px;
+  height: 500px;
+  background-image: url("public/foto-banner-funilaria.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 }
 .caixa-titulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.titulo  {
-    font-size:13rem;
-    color:rgb(240, 236, 234);
-    text-shadow:0 0 55px  rgb(125, 235, 243);
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.titulo {
+  font-size: 13rem;
+  color: rgb(240, 236, 234);
+  text-shadow: 0 0 55px rgb(125, 235, 243);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.orcamento  {
-    color:#fff;
-    background-color: green;
-    font-size: 1rem;
-    margin-bottom:50px;
-    padding: 10px;
-    border-radius: 4px;
+.orcamento {
+  color: #fff;
+  background-color: green;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 4px;
 }
 .orcamento a {
-    color:#fff;
-    text-decoration:none;
-    font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
 }
 .orcamento:hover {
-    background-color: #010101;
-    box-shadow: inset 0px 0px 15px 15px rgb(7, 255, 7);
+  background-color: #010101;
+  box-shadow: inset 0px 0px 15px 15px rgb(7, 255, 7);
 }
 /* seção sobre */
 .container-pagina {
-    width:90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 .container-pagina p {
-    line-height:30px;
+  line-height: 30px;
 }
-.container-pagina p::first-letter{
-    font-size:2rem;
-    font-weight: 900;
-    color:#333;
-    float: left;
-    margin-right: 0.1em;
-    line-height: 0.6;
+.container-pagina p::first-letter {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #333;
+  float: left;
+  margin-right: 0.1em;
+  line-height: 0.6;
 }
 .sobre {
-    height: auto;
-    width: 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #fff;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
 }
-.sub-titulo-destaque{
-    font-size: 3rem;
-    position:relative;
-    text-align:center;
-    margin: 30px auto;
+.sub-titulo-destaque {
+  font-size: 3rem;
+  position: relative;
+  text-align: center;
+  margin: 30px auto;
 }
 .sub-titulo-destaque::before {
-    content:"";
-    width:50px;
-    height:4px;
-    position: absolute;
-    top:50px;
-    background-color:yellow;
+  content: "";
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  top: 50px;
+  background-color: yellow;
 }
 #sobre p {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    width: 90%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 90%;
 }
 
 /* seção serviços */
 
 .funilaria-pintura p,
 .polimento-automotivo p,
-.polimento-farois p{
-    font-size: 1rem;
-    margin: 10px;
+.polimento-farois p {
+  font-size: 1rem;
+  margin: 10px;
 }
 .servicos {
-    width: 100%;
-    height: auto;
-    display:flex;
-    flex-direction:column;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 .conteudo-servicos {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
-h4,h5,h6,h7 {
-    font-size: 2rem;
-    margin: 20px auto;
-    text-align:center;
+h4,
+h5,
+h6,
+h7 {
+  font-size: 2rem;
+  margin: 20px auto;
+  text-align: center;
 }
 .funilaria-pintura,
 .polimento-automotivo,
 .polimento-farois {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  height: 100vh;
 }
 
 .box-imagem {
-    width: 90%;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-    border: 1px solid #ccc;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  width: 90%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 .card-imagem {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
-.imagem-funilaria img , 
+.imagem-funilaria img,
 .imagem-polimento-automotivo img,
 .imagem-polimento-farois img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .legenda-imagem {
-    padding: 15px;
-    background-color: #f8f8f8;
-    text-align: justify;
-    font-size: 16px;
-    color: #333;
+  padding: 15px;
+  background-color: #f8f8f8;
+  text-align: justify;
+  font-size: 16px;
+  color: #333;
 }
 
 .legenda-imagem p {
-    margin: 0;
+  margin: 0;
 }
 
 .servicos-adicionais {
-    max-width: 700px;
-    min-width: 300px;
-    height:300px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
+  max-width: 700px;
+  min-width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .servicos-adicionais p {
-    font-size:18px;
-    color:#333;
+  font-size: 18px;
+  color: #333;
 }
 .box-lista ul {
-    color:#000;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:17px;
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
 }
 .box-lista li {
-    margin: 20px 0;
-    text-align:start
+  margin: 20px 0;
+  text-align: start;
 }
 .contato {
-    margin:0 auto;
+  margin: 0 auto;
 }
 .rota-mapa {
-    width: 90%;
-    margin:0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 .rota-mapa iframe {
-    width:100%;
-    height:400px;
-    margin: 20px auto;
+  width: 100%;
+  height: 400px;
+  margin: 20px auto;
 }
-.voltarTopo  {
-    position: fixed;
-    bottom: 20%;
-    right: 3%;
-    display: block;
-    background-color: #007bff86;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 1;
+.voltarTopo {
+  position: fixed;
+  bottom: 20%;
+  right: 3%;
+  display: block;
+  background-color: #007bff86;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  z-index: 1;
 }
 .voltarTopo:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+  background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* seção rodapé */
 .rodape {
-    width: 100%;
-    height: 150px;
-    position: relative;
-    background-color: #010101;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0; /* Garante que o rodapé não diminua de tamanho */
-    margin-top: auto; /* Empurra o rodapé para o final da página */
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: #010101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Garante que o rodapé não diminua de tamanho */
+  margin-top: auto; /* Empurra o rodapé para o final da página */
 }
 
 .conteudo-rodape {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.conteudo-rodape img {
+  width: 100px;
+  height: 100px;
+}
+
+.conteudo-rodape p {
+  margin: 0;
+}
+.links-redes-sociais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15rem;
+}
+a .instagram {
+  width: 110px;
+  height: 110px;
+  opacity: 70%;
+}
+a .instagram:hover {
+  transform: rotate(0.1turn);
+  opacity: 100%;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform: rotate3d(1, 2, 3, 10deg);
+}
+a .whats {
+  height: 75px;
+  width: 75px;
+  border-radius: 50px;
+  opacity: 70%;
+}
+.whats:hover {
+  opacity: 100%;
+  transform: rotate(0.1turn);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform: rotate3d(1, 2, 3, 10deg);
+}
+/* media */
+
+@media (max-width: 480px) {
+  .topo {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .conteudo-topo {
+    display: flex;
+  }
+  .conteudo-topo h1 {
+    font-size: 1rem;
+    word-spacing: 7px;
+    width: 200px;
+  }
+  .conteudo-topo img {
+    width: 6rem;
+    height: auto;
+  }
+  .conteudo-topo::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    width: 97%;
+    height: 1px;
+    background: linear-gradient(to left, #564d4d, #dfd5d5, #3f3434);
+  }
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .menu {
+    top: 60px;
+    right: 0; /* Ajuste o valor conforme necessário para alinhar o menu com o ícone */
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Ajusta a altura do menu para auto */
+    background: #3333337e;
+    transform: scaleY(0); /* Colapse o menu verticalmente */
+    transform-origin: top; /* Altere a origem da transformação para o topo */
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0; /* Adicione um pouco de padding */
+    z-index: 1;
+  }
+  .menu-toggle:checked ~ .menu {
+    transform: scaleY(1); /* Expanda o menu verticalmente */
+  }
+  /* seção banner */
+  .caixa-titulo {
+    width: 350px;
+  }
+  .titulo {
+    font-size: 5rem;
+  }
+  /* seção sobre */
+
+  #sobre {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  /* seção serviços */
+
+  #servicos {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .servicos p {
+    width: 100%;
+  }
+  .servicos-adicionais {
+    height: auto;
+  }
+  .imagem-funilaria img,
+  .imagem-polimento-automotivo img,
+  .imagem-polimento-farois img {
+    width: 100%;
+    height: 50vh;
+    display: block;
+  }
+  .legenda-imagem {
+    padding: 15px 5px;
+    background-color: #f8f8f8;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+  }
+  .legenda-imagem p {
+    margin: 0;
+  }
+  .voltarTopo {
+    bottom: 30%;
+  }
+  /* media seção rodapé */
+
+  .rodape {
+    width: 100%;
+    height: 250px;
+  }
+  .conteudo-rodape {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     color: #fff;
     font-size: 16px;
     text-align: center;
-}
-
-.conteudo-rodape img {
-    width: 100px;
-    height: 100px;
-}
-
-.conteudo-rodape p {
-    margin: 0;
-}
-.links-redes-sociais {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 15rem;
-}
-a .instagram {
-    width:110px;
-    height:110px;
-    opacity: 70%;
-}
-a .instagram:hover {
-    transform: rotate(0.1turn);
-    opacity: 100%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: rotate3d(1, 2.0, 3.0, 10deg);
-}
-a .whats {
-    height:75px;
-    width: 75px;
+  }
+  a .whats {
+    width: 70px;
+    height: 70px;
     border-radius: 50px;
     opacity: 70%;
+  }
+  .links-redes-sociais {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
-.whats:hover {
-    opacity:100%;
-    transform: rotate(0.1turn);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: rotate3d(1, 2.0, 3.0, 10deg);
+@media (min-width: 481px) and (max-width: 1024px) {
+  .conteudo-topo h1 {
+    font-size: 1.7rem;
+    word-spacing: 7px;
+    width: 300px;
+  }
+  .menu {
+    top: 60px;
+    right: 1rem; /* Ajuste o valor conforme necessário para alinhar o menu com o ícone */
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Ajusta a altura do menu para auto */
+    background: #3333337e;
+    transform: scaleY(0); /* Colapse o menu verticalmente */
+    transform-origin: top; /* Altere a origem da transformação para o topo */
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0; /* Adicione um pouco de padding */
+    z-index: 1;
+  }
+  .voltarTopo {
+    bottom: 12%;
+  }
 }
-/* media */
-
-@media (max-width:480px){
-    .topo {
-        display:flex;
-        justify-content: space-around;
-        text-align: center;
-    }
-    .conteudo-topo {
-        display: flex;
-    }
-    .conteudo-topo h1 {
-        font-size: 1rem;
-        word-spacing: 7px;
-        width: 200px;
-    }
-    .conteudo-topo img {
-        width: 6rem;
-        height: auto;
-    }
-    .conteudo-topo::before {
-        content: "";
-        position: absolute; 
-        top: 60px;
-        width: 97%; 
-        height: 1px; 
-        background: linear-gradient(to left, #564d4d, #dfd5d5,#3f3434);
-    }
-    .menu-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .menu {
-        top: 60px;
-        right: 0; /* Ajuste o valor conforme necessário para alinhar o menu com o ícone */ 
-        width: 100px; /* Ajuste a largura conforme necessário */ 
-        height: auto; /* Ajusta a altura do menu para auto */ 
-        background: #3333337e; 
-        transform: scaleY(0); /* Colapse o menu verticalmente */ 
-        transform-origin: top; /* Altere a origem da transformação para o topo */ 
-        transition: transform 0.3s ease; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        flex-direction: column; 
-        padding: 10px 0; /* Adicione um pouco de padding */ 
-        z-index: 1;
-    }
-    .menu-toggle:checked ~ .menu { 
-        transform: scaleY(1); /* Expanda o menu verticalmente */
-    }
-    /* seção banner */
-    .caixa-titulo {
-        width: 350px;
-    }
-    .titulo {
-        font-size: 5rem;
-    }
-    /* seção sobre */
-
-    #sobre {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
-    /* seção serviços */
-
-    #servicos {
-        padding: 10px;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-    .servicos p {
-        width: 100%;
-    }
-    .servicos-adicionais  {
-        height: auto;
-    }
-    .imagem-funilaria img,
-    .imagem-polimento-automotivo img,
-    .imagem-polimento-farois img {
-        width: 100%;  
-        height: 50vh; 
-        display: block; 
-    }
-    .legenda-imagem {
-        padding: 15px 5px;
-        background-color: #f8f8f8;
-        text-align: justify;
-        font-size: 1rem;
-        color: #333;
-    }
-    .legenda-imagem p {
-        margin: 0;
-    }
-    .voltarTopo{
-        bottom: 30%;
-    }
-    /* media seção rodapé */
-
-    .rodape {
-        width: 100%;
-        height: 250px;
-    }
-    .conteudo-rodape {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        font-size: 16px;
-        text-align: center;
-    }
-    a .whats {
-        width: 70px;
-        height: 70px;
-        border-radius: 50px;
-        opacity: 70%;
-    }
-    .links-redes-sociais {
-        width: 300px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
-@media(min-width:481px) and (max-width:1024px) {
-    .conteudo-topo h1 {
-        font-size: 1.7rem;
-        word-spacing: 7px;
-        width: 300px;
-    }
-    .menu {
-        top: 60px;
-        right: 1rem; /* Ajuste o valor conforme necessário para alinhar o menu com o ícone */ 
-        width: 100px; /* Ajuste a largura conforme necessário */ 
-        height: auto; /* Ajusta a altura do menu para auto */ 
-        background: #3333337e; 
-        transform: scaleY(0); /* Colapse o menu verticalmente */ 
-        transform-origin: top; /* Altere a origem da transformação para o topo */ 
-        transition: transform 0.3s ease; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        flex-direction: column; 
-        padding: 10px 0; /* Adicione um pouco de padding */ 
-        z-index: 1;
-    }
-    .voltarTopo {
-        bottom: 12%;
-    }
-}
-
