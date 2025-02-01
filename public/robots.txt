@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://dakar-funilaria-pintura.vercel.app/sitemap.xml
