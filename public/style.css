@@ -145,7 +145,7 @@ body {
   max-width: 100%;
   min-width: 300px;
   height: 500px;
-  background-image: url("/foto-banner-funilaria.jpg");
+  background-image: url("foto-banner-funilaria.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
