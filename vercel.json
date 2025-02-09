@@ -1,3 +1,8 @@
 {
-  "cleanUrls": true
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "headers": { "Content-Type": "application/xml" }
+    }
+  ]
 }
